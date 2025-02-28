@@ -1,0 +1,121 @@
+
+.wrapper{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../../../assets/images/bg.png); 
+    background-size: cover;
+}
+.input-container{
+    opacity: 100;
+      top: 130px;
+        left: 182px;
+        position: absolute;
+        display: flex;
+        box-sizing: border-box;
+        overflow: hidden;
+        border-radius: 16px;
+        background: #ffffff;
+        width: 941px;
+        height: 403px;
+      
+}
+.titre-app{
+        top: 49px;
+        left: 248px;
+        position: absolute;
+        display: flex;
+        color: #ff2d30;
+        font-size: 64px;
+        font-family: Poppins;
+        line-height: 40px;
+        letter-spacing: 0%;
+        text-decoration: none;
+        font-weight: 700;
+        text-align: left;
+        text-wrap: nowrap;
+        width: 809px;
+        height: 40px;
+      
+}
+.input-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%); 
+    width: 1px; 
+    height: 100%; 
+    background-color: #000000; 
+  }
+  .text-login {
+    top: 44px;
+    left: 153px;
+    position: absolute;
+    display: flex;
+    color: #000000;
+    font-size: 48px;
+    font-family: Poppins;
+    line-height: 40px;
+    letter-spacing: 10%;
+    text-decoration: none;
+    font-weight: 600;
+    text-align: left;
+    text-wrap: nowrap;
+    width: 161px;
+    height: 40px;
+  }
+  .input-field{
+    position: absolute;
+    display: flex;
+    width: 321px;
+    height: 45px;
+    border-radius: 4px;
+    font-family: Poppins;
+    background-color: #E9E9E9;
+    color:#000000;
+    border-color: transparent;
+    padding-left: 5px;
+  }
+  .matricule {
+    top: 103px;
+    left: 65px;
+    
+
+  }
+  
+  .mdp {
+    top: 183px;
+    left: 65px;
+  
+  }
+  .button-login {
+    top: 251px;
+    left: 111px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    font-size: 30px;
+    width: 230px;
+    height: 52px;
+    background-color: #FF2D30;
+    border-radius: 16px;
+    font-family: Poppins;
+    letter-spacing: 12%;
+    transition: background-color 0.4s;
+
+    &:hover {
+      background-color: #610d02;
+      cursor: pointer;
+    }    
+}
+.logo{
+    position: absolute;
+    top: 140px;
+    right: 40px;
+    width: 400px;
+}

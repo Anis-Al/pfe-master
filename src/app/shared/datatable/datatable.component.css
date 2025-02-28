@@ -1,0 +1,43 @@
+::ng-deep .p-paginator {
+    width: auto !important; 
+    max-width: 40%; 
+    margin: 0 auto; 
+    display: flex;
+    justify-content: center;
+     background-color: #FF2D30;  
+    color:#ffffff; 
+  }
+  ::ng-deep .p-datatable .p-datatable-thead>tr{
+    margin: 10px 20px;
+  }
+  ::ng-deep .p-datatable .p-datatable-thead > tr > th {
+    background-color: #FF2D30 !important; 
+    color: rgb(255, 255, 255) !important; 
+    font-weight: bold !important; 
+    text-align: left; 
+    padding: 10px !important; 
+  }
+  
+    
+    ::ng-deep .p-datatable .p-datatable-tbody > tr{
+      background-color: white !important;  
+      color: black !important;
+        
+        }
+    ::ng-deep .p-datatable .p-datatable-tbody > tr>td> .p-button {
+            background-color: #29191a;
+            color: white;
+            border: none;
+            font-weight: bold;
+            padding: 10px;
+            margin: 5px;
+            cursor: pointer;
+          }
+          
+          .p-datatable .p-datatable-tbody > tr .p-button:hover {
+            background-color: #FF2D30;
+            color: white;
+          }
+    
+    
+  

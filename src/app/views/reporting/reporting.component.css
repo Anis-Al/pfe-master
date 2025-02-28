@@ -1,0 +1,15 @@
+.home-container{
+    margin-top:1%;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.titre-page{
+font-size: 48px;
+font-family: "ADLaM Display",serif;
+text-align: center;
+color: #FF2D30;
+font-weight: 500;
+}

@@ -1,0 +1,14 @@
+<div class="wrapper">
+    <span class="titre-app">Déclarations correctives</span>
+    <div class="input-container">
+        <form (ngSubmit)="login()">
+        <span class="text-login">LOGIN</span>
+        <input pInputText name="matricule" [(ngModel)]="matricule" type="text" class="input-field matricule border-danger " placeholder="Matricule">
+        <input pInputText name="motdepasse" [(ngModel)]="motdepasse" type="password" class="ng-dirty input-field mdp border-danger" placeholder="Mot de passe" />
+        <button type="submit" class="button-login">Se Connecter</button>
+        </form>
+        <img src="../../../assets/images/sga-logo.png" alt="SGA LOGO" class="logo">
+
+    </div>  
+</div>
+ 

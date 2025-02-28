@@ -1,0 +1,47 @@
+<header class="header">
+  <div class="logo">
+    <a routerLink="/acceuil"> 
+      <img src="../../../assets/images/sga-logo-mini.png" alt="Company Logo">
+    </a>
+  </div>
+  
+  <nav class="navbar">
+    <ul>
+      <li class="dropdown">
+        <a routerLink="/correction" class="dropdown">
+          <fa-icon [icon]="faPencil" class="icon-navbar"></fa-icon>
+          Correction
+        </a>
+        <ul class="dropdown-content">
+          <li><a routerLink="/correction/errors">Intégration EXCEL</a></li>
+          <li><a routerLink="/correction/validate">Modification des crédits</a></li>
+          <li><a routerLink="/correction/review">Génération XML</a></li>
+        </ul>
+      </li>
+      <li>
+        <a routerLink="/reporting">
+          <fa-icon [icon]="faList" class="icon-navbar"></fa-icon>
+          Reporting
+        </a>
+      </li>
+      <li>
+        <a routerLink="/audit">
+          <fa-icon [icon]="faEye" class="icon-navbar"></fa-icon>
+          Audit
+        </a>
+      </li>
+      <li>
+        <a routerLink="/users">
+          <fa-icon [icon]="faCog" class="icon-navbar"></fa-icon>
+          Habilitations
+        </a>
+      </li>
+    </ul>
+  </nav>
+  
+  <div class="logout">
+    <a routerLink="/login">
+      <fa-icon [icon]="faSignOut" class="logout"></fa-icon>
+    </a>
+  </div>
+</header>

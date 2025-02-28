@@ -1,0 +1,40 @@
+
+.home-container{
+    margin-top:3%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.home-content{
+    text-align: center;
+}
+.bienvenue{
+    font-family: "ADLaM Display",serif;
+    color: #FF2D30;
+    font-size: 64px;
+    font-weight: 500;
+}
+.matricule{
+    font-family: "ADLaM Display",serif;
+    font-size: 32px;
+    font-weight: 300;
+    padding-top: 10px;
+    color: #000000;
+}
+.button-pdf{
+    background-color: #FF2D30;
+    color: #ffffff;
+    font-family: "Ubuntu",serif;
+    font-size: 32px;
+    font-weight: normal;
+    padding: 8px 10px;
+    letter-spacing: 2%;
+    border-radius: 12px;
+    margin-top: 40px;
+    &:hover{
+        background-color: #5f1408;
+        cursor: pointer;
+    }
+
+}
