@@ -1,0 +1,72 @@
+{
+    "Informations Générales": [
+      { "name": "numContrat", "label": "Numéro de Contrat", "type": "text" },
+      { "name": "typeCredit", "label": "Type de Crédit", "type": "dropdown", "options": [
+        { "label": "USD", "value": "021" },
+        { "label": "EUR", "value": "020" },
+        { "label": "DZD", "value": "012" }
+      ]
+      },
+      { "name": "plafondAccorde", "label": "Plafond Accordé", "type": "number" },
+      { "name": "numeroPlafond", "label": "Numéro de Plafond", "type": "text" },
+      { "name": "codeActivite", "label": "Code d'Activité", "type": "number" },
+      { "name": "situation", "label": "Situation", "type": "text" },
+      { "name": "motif", "label": "Motif", "type": "text" }
+    ],
+  
+    "Débiteur": [
+      { "name": "cle", "label": "Clé", "type": "text" },
+      { "name": "typeCle", "label": "Type de Clé", "type": "text" },
+      { "name": "niveauResp", "label": "Niveau de Responsabilité", "type": "text" },
+      { "name": "nif", "label": "NIF", "type": "text" },
+      { "name": "rib", "label": "RIB", "type": "text" },
+      { "name": "cli", "label": "CLI", "type": "text" },
+      { "name": "soldeRestant", "label": "Solde Restant", "type": "number" }
+    ],
+  
+    "Localisation": [
+      { "name": "codeAgence", "label": "Code Agence", "type": "text" },
+      { "name": "codeWilaya", "label": "Code Wilaya", "type": "text" },
+      { "name": "codePays", "label": "Code Pays", "type": "text" }
+    ],
+  
+    "Conditions Financières": [
+      { "name": "creditsAccorde", "label": "Crédits Accordés", "type": "number" },
+      { "name": "dev", "label": "Devise", "type": "dropdown", "options": [
+          { "label": "EUR", "value": "eur" },
+          { "label": "USD", "value": "usd" },
+          { "label": "DZD", "value": "dzd" }
+        ] 
+      },
+      { "name": "tauxInterets", "label": "Taux d'Intérêts", "type": "number" },
+      { "name": "coutCredits", "label": "Coût des Crédits", "type": "number" }
+    ],
+  
+    "Remboursement": [
+      { "name": "mensualite", "label": "Mensualité", "type": "number" },
+      { "name": "dureeInit", "label": "Durée Initiale", "type": "number" },
+      { "name": "dureeRestante", "label": "Durée Restante", "type": "number" }
+    ],
+  
+    "Retard": [
+      { "name": "classeRetard", "label": "Classe de Retard", "type": "text" },
+      { "name": "nombreEcheancesImpayes", "label": "Nombre d'Échéances Impayées", "type": "number" },
+      { "name": "dateConstatationEcheancesImpayes", "label": "Date Constatation des Impayés", "type": "date" },
+      { "name": "montantCapitalRetard", "label": "Montant du Capital en Retard", "type": "number" },
+      { "name": "montantInteretsRetard", "label": "Montant des Intérêts en Retard", "type": "number" },
+      { "name": "lautre", "label": "Autre", "type": "text" }
+    ],
+  
+    "Dates": [
+      { "name": "dateOctroi", "label": "Date d'Octroi", "type": "date" },
+      { "name": "dateExpiration", "label": "Date d'Expiration", "type": "date" },
+      { "name": "dateDeclaration", "label": "Date de Déclaration", "type": "date" },
+      { "name": "dateRejet", "label": "Date de Rejet", "type": "date" }
+    ],
+  
+    "Garantie": [
+      { "name": "type", "label": "Type de Garantie", "type": "text" },
+      { "name": "montant", "label": "Montant", "type": "number" }
+    ]
+  }
+  

@@ -1,0 +1,129 @@
+.home-container{
+    margin-top:6%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.titre-page{
+font-family: "ADLaM Display",serif;
+display: flex;
+flex-direction: column; 
+justify-content: center;
+text-align: center;
+color: #FF2D30;
+font-weight: 400;
+}
+.titre-page :nth-child(1){
+    font-size: 44px;
+}
+.titre-page :nth-child(2){
+    font-size: 32px;
+    span{
+      font-weight: 300;
+      font-size: 28px;
+    }
+    
+}
+:host ::ng-deep  .home-container .p-button {
+  
+  width: 150px !important;
+  position: relative;
+  left: 550px;
+  bottom: 50px;
+  background-color: #FF2D30 !important; 
+  color: white !important;
+  font-size: 20px !important;
+  font-weight: 500 !important;
+  border-radius: 12px !important;
+  border : solid 2px #000000  !important;
+&:hover {
+    background-color: #270500 !important;
+    border-color: #610d02 !important;
+} 
+}
+.form-container{
+  margin-top: 0;
+    display: flex;
+    width: 100%;
+    height: 70%;
+    border-top: #FF2D30 solid 2px;
+}
+.form-groups{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #FF2D30;
+width: 20%;
+height: 100%;
+}
+.form-inputs{
+background-color: rgb(255, 255, 255);
+flex:1;
+height: 100%;
+display: flex;
+justify-content: center;
+height: 100vh;
+padding: 20px 10px;
+
+}
+::ng-deep .p-menu {
+  background-color: #FF2D30 !important;
+  color: white !important;
+  padding: 0px 10px 30px 5px !important;
+  border-color: transparent !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  
+ 
+}
+::ng-deep .p-menu-list {
+  
+  padding: 15px 0px !important;
+  
+  
+ 
+}
+.titre-categories{
+  width: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  color: white;
+  padding: 10px 20px;
+  letter-spacing: 20%;
+
+  
+}
+.ligne-h-100{
+  width: 100%;
+  border: none;
+  height: 3px; 
+  background-color: rgb(255, 255, 255); 
+  margin: 0;
+}
+.p-menuitem-active {
+  font-weight: bold;
+  background-color: #9e9e9e;
+}
+.menu-list {
+  width: 100%;
+}
+
+.menu-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  border-radius: 5px;
+}
+
+.menu-item:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.selected {
+  background-color: #000000 !important; 
+  color: white !important;
+  font-weight: 500;
+}

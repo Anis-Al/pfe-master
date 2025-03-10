@@ -1,6 +1,11 @@
 <app-header></app-header>
 <div class="home-container">
-<div class="titre-page"><span>Reporting</span></div>
-<app-datatable [data]="data" [cols]="cols"></app-datatable>
-  
+    <div class="options-container">  
+        <app-searchbar></app-searchbar>
+        <span class="titre-page">Liste des crédits</span> 
+        <p-button label="Exporter"></p-button>
+    </div>
+    <div class="table-reporting-container">
+        <app-datatable [data]="data" [cols]="cols" [source]="source" [estStatique]="true"></app-datatable>
+    </div>
 </div>

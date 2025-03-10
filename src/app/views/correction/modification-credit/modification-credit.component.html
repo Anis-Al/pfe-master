@@ -1,0 +1,40 @@
+<app-header></app-header>
+
+<div class="home-container" *ngIf="!isLoading;else loading">
+    <div class="titre-page">
+        <span>Formulaire Crédit </span>
+        <span>Crédit : <span> {{numContratValue}} </span> </span>
+    </div>
+
+
+    <p-button label="Sauvegarder" class="btn-sauv sauv"></p-button>
+
+    <div class="form-container">
+        <div class="form-groups">
+            <span class="titre-categories">Catégories</span>
+            <hr class="ligne-h-100">
+            <p-menu [model]="items" class="menu-list">
+                <ng-template let-item pTemplate="item">
+                    <div 
+                        class="menu-item" 
+                        [ngClass]="{'selected': selectedGroup === item.label}" 
+                        (click)="selectGroup(item.label)">
+                        {{ item.label }}
+                    </div>
+                </ng-template>
+            </p-menu>
+                    </div>
+
+        <div class="form-inputs">
+            <app-form-inputs-credit 
+                [formGroup]="formGroup" 
+                [fields]="selectedFields">
+            </app-form-inputs-credit>
+        </div>
+    </div>
+</div>
+<ng-template #loading>
+    <div class="loading-container">
+        <p>Chargement des données...</p>
+    </div>
+</ng-template>

@@ -35,6 +35,6 @@ export class UtilisateursComponent implements OnInit {
     { user: 'Sarah Blue', role: 'Operator' }
 ];
 ngOnInit() {
-  this.currentRoute = this.router.url; // Get current route
+  this.currentRoute = this.router.url; 
 }
 }

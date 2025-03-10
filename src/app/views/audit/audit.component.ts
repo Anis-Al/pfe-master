@@ -15,7 +15,7 @@ export class AuditComponent   {
     { field: 'utilisateur', header: 'Utilisateur' },
     { field: 'operation', header: 'Operation' },
     { field: 'operationnel', header: 'Operationnel' },
-    { field: 'dh', header: 'D/H' }
+    { field: 'dh', header: 'D/H' ,date:true}
   ];
 
   tableData = [

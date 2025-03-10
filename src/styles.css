@@ -1,6 +1,7 @@
 html, body {
-    overflow-x: hidden; /* Prevents horizontal scrolling on the entire page */
-    max-width: 100vw; /* Ensures no element forces the page width beyond the viewport */
+    overflow-x: hidden; 
+    max-width: 100vw; 
+    overflow: hidden;
   }
 
 body{

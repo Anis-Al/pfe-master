@@ -1,10 +1,11 @@
 
 .home-container{
-    margin-top:3%;
+    margin-top:5%;
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden; 
 }
 .home-content{
     text-align: center;
@@ -38,3 +39,65 @@
     }
 
 }
+
+/* cartes */
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    margin-top: 2rem;
+    padding: 0 1.5rem;
+  }
+
+  @media (max-width: 1024px) {
+    .cards-container {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  @media (max-width: 768px) {
+    .cards-container {
+      grid-template-columns: repeat(1, 1fr);
+    }
+  }
+  ::ng-deep .p-card-header{
+    margin-top: 10px;
+  }
+  .card {
+    text-align: center;
+    transition: box-shadow 0.3s ease;
+    border-color: transparent;
+    padding: 1rem;
+  }
+  .card:hover {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  .card-title {
+    font-size: 1.25rem;
+    
+  }
+  .card-description {
+    color: #6b7280;
+  }
+  .card-button {
+    margin-top: 0.5rem;
+    background-color: #FF2D30;
+    color: #ffffff;
+    border-color: transparent;
+  }
+  .icon-excel {
+    font-size: 2rem;
+    color: #f97316;
+  }
+  .icon-credits {
+    font-size: 2rem;
+    color: #10b981;
+  }
+  .icon-ba {
+    font-size: 2rem;
+    color: #3b82f6;
+  }
+  .icon-habilitations {
+    font-size: 2rem;
+    color: #8b5cf6;
+  }

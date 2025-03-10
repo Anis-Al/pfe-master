@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from '../../shared/header/header.component';
 import { DatatableComponent } from '../../shared/datatable/datatable.component';
+import { SearchbarComponent } from '../../shared/searchbar/searchbar.component';
+import { ButtonModule } from 'primeng/button';
+
 @Component({
   selector: 'app-reporting',
   standalone: true,
-  imports: [HeaderComponent,DatatableComponent],
+  imports: [HeaderComponent,DatatableComponent,SearchbarComponent,ButtonModule],
   templateUrl: './reporting.component.html',
   styleUrl: './reporting.component.css'
 })
@@ -21,4 +24,6 @@ export class ReportingComponent {
     field: `col${i + 1}`,
     header: `Column ${i + 1}`
   }));
+  source="reporting";
+  estStatique=true;
 }

@@ -21,15 +21,14 @@
     flex-grow: 1; 
     text-align: center;
 }
-
 .options-container app-searchbar {
     text-align: left;
     max-width: 150px; 
 }
 
 .options-container p-button {
-    text-align: right;
-    max-width: 120px;
+    text-align: left;
+    max-width: 210px;
 }
 
 
@@ -38,13 +37,14 @@
     overflow-x: auto; 
 
 }
-::ng-deep .p-search-bar{
-    height:20px !important;
-}
+
 ::ng-deep .options-container .p-button {
 background-color: #FF2D30 !important;
 color: white !important;
-width: auto !important;
+width: 170px !important;
+font-size: 12px !important;
+border-color: #FF2D30 !important;
+
 }
 .titre-page{
 font-size: 48px;
@@ -54,7 +54,7 @@ color: #FF2D30;
 font-weight: 500;
 }
 ::ng-deep app-searchbar input {
-    background-color: #f0f0f0 !important; 
+    background-color: #ccc !important; 
     color:black !important;
     width: 200px !important;  
     height: 50px !important; 

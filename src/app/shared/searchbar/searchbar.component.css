@@ -1,0 +1,11 @@
+::ng-deep .p-inputtext {
+    background-color: white !important;
+    
+}
+::ng-deep .p-inputtext:active{
+    border-color: #ff2d30 !important;
+    &::after{
+        border-color: #ff2d30 !important;
+
+    }
+}

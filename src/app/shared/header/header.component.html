@@ -1,47 +1,28 @@
-<header class="header">
-  <div class="logo">
-    <a routerLink="/acceuil"> 
-      <img src="../../../assets/images/sga-logo-mini.png" alt="Company Logo">
-    </a>
-  </div>
-  
-  <nav class="navbar">
-    <ul>
-      <li class="dropdown">
-        <a routerLink="/correction" class="dropdown">
-          <fa-icon [icon]="faPencil" class="icon-navbar"></fa-icon>
-          Correction
-        </a>
-        <ul class="dropdown-content">
-          <li><a routerLink="/correction/errors">Intégration EXCEL</a></li>
-          <li><a routerLink="/correction/validate">Modification des crédits</a></li>
-          <li><a routerLink="/correction/review">Génération XML</a></li>
-        </ul>
-      </li>
-      <li>
-        <a routerLink="/reporting">
-          <fa-icon [icon]="faList" class="icon-navbar"></fa-icon>
-          Reporting
-        </a>
-      </li>
-      <li>
-        <a routerLink="/audit">
-          <fa-icon [icon]="faEye" class="icon-navbar"></fa-icon>
-          Audit
-        </a>
-      </li>
-      <li>
-        <a routerLink="/users">
-          <fa-icon [icon]="faCog" class="icon-navbar"></fa-icon>
-          Habilitations
-        </a>
-      </li>
-    </ul>
-  </nav>
-  
-  <div class="logout">
-    <a routerLink="/login">
-      <fa-icon [icon]="faSignOut" class="logout"></fa-icon>
-    </a>
-  </div>
-</header>
+<p-menubar [model]="[]">
+  <ng-template pTemplate="start">
+    <div class="navbar-left">
+      <a routerLink="/acceuil">
+      <img src="../../../assets/images/sga-logo-mini.png" style="filter: brightness(120%);" height="40" alt="Company Logo">
+      </a>
+      <div class="center-links">
+        <p-menu #ExcelMenu [model]="excel_sous_menu" [popup]="true"></p-menu>
+        <button pButton label="Excel" icon="pi pi-file" (mouseenter)="ExcelMenu.toggle($event)" class="p-button-text"></button>
+
+        <p-menu #CreditsMenu [model]="credits_sous_menu" [popup]="true"></p-menu>
+        <button pButton label="Crédits" icon="pi pi-list" (mouseenter)="CreditsMenu.toggle($event)" class="p-button-text"></button>
+
+        <p-menu #BaMenu [model]="declba_sous_menu" [popup]="true"></p-menu>
+        <button pButton label="Décl. BA" icon="pi pi-copy" (mouseenter)="BaMenu.toggle($event)" class="p-button-text"></button>
+
+        <button pButton routerLink="/users" label="Habilitations" icon="pi pi-cog"  class="p-button-text"></button>
+      </div>
+    </div>
+  </ng-template>
+
+    
+  <ng-template pTemplate="end">
+    <button pButton class="logout-button p-button-rounded" (click)="logout()" routerLink="/login">
+      <i class="pi pi-sign-out"></i>
+    </button>
+  </ng-template>
+</p-menubar>
