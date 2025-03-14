@@ -19,17 +19,17 @@ export class HeaderComponent {
   // faList = faList;
   // faCog = faCog;
   excel_sous_menu = [
-    { label: 'Charger un fichier Excel', routerLink: ['/ChargementExcel'] },
-    { label: 'Liste des fichiers Excel',  routerLink: ['/ListeExcel'] },
+    { label: 'Charger un fichier Excel', routerLink: ['/chargement-excel'] },
+    { label: 'Liste des fichiers Excel',  routerLink: ['/liste-excels'] },
     { label: 'Audit',  routerLink: ['/dashboard/analytics'] }
 
-  ];
+  ];  
 
   credits_sous_menu = [
-    { label: 'Ajouter un crédit',  routerLink: ['/FormCredit'] },
-    { label: 'Liste des crédits',  routerLink: ['/reporting'] },
+    { label: 'Ajouter un crédit',  routerLink: ['/form-credit'] },
+    { label: 'Liste des crédits',  routerLink: ['/liste-credits'] },
     { label: 'Reporting',routerLink: ['/loans/rejected'] },
-    { label: 'Audit',  routerLink: ['/dashboard/analytics'] }
+    { label: 'Audit',  routerLink: ['/audit'] , queryParams: { type: 'excel' }}
 
   ];
 

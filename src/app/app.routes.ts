@@ -23,23 +23,23 @@ export const routes: Routes = [
         loadComponent: () => import('./views/utilisateurs/utilisateurs.component').then(m => m.UtilisateursComponent)
     },
     {
-        path: 'reporting',
-        loadComponent: () => import('./views/reporting/reporting.component').then(m => m.ReportingComponent)
+        path: 'liste-credits',
+        loadComponent: () => import('./views/credit/liste-credits/liste-credits.component').then(m => m.ListeCreditsComponent)
     }
 
     ,
     {
-        path:'FormCredit',
-        loadComponent: () => import('./views/correction/modification-credit/modification-credit.component').then(m => m.ModificationCreditComponent)
+        path:'form-credit',
+        loadComponent: () => import('./views/credit/form-credit/form-credit.component').then(m => m.FormCreditComponent)
     }
     ,
     {
-        path:'ListeExcel',
-        loadComponent: () => import('./views/correction/integration-excel/integration-excel.component').then(m => m.IntegrationExcelComponent)
+        path:'liste-excels',
+        loadComponent: () => import('./views/excel/liste-fichiers/liste-fichiers.component').then(m => m.ListeFichiersComponent)
     }
     ,
     {
-        path:'ChargementExcel',
-        loadComponent: () => import('./views/excel/chargement-fichier-excel/chargement-fichier-excel.component').then(m => m.ChargementFichierExcelComponent)
+        path:'chargement-excel',
+        loadComponent: () => import('./views/excel/Integration-fichier/chargement-fichier-excel/chargement-fichier-excel.component').then(m => m.ChargementFichierExcelComponent)
     }
 ];

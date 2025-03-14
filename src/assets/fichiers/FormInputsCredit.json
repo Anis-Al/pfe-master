@@ -25,13 +25,13 @@
     ],
   
     "Localisation": [
-      { "name": "codeAgence", "label": "Code Agence", "type": "text" },
-      { "name": "codeWilaya", "label": "Code Wilaya", "type": "text" },
-      { "name": "codePays", "label": "Code Pays", "type": "text" }
+      { "name": "codeAgence", "label": "Agence", "type": "text" },
+      { "name": "codeWilaya", "label": "Wilaya", "type": "text" },
+      { "name": "codePays", "label": "Pays", "type": "text" }
     ],
   
     "Conditions Financières": [
-      { "name": "creditsAccorde", "label": "Crédits Accordés", "type": "number" },
+      { "name": "creditsAccorde", "label": "Crédit Accordé", "type": "number" },
       { "name": "dev", "label": "Devise", "type": "dropdown", "options": [
           { "label": "EUR", "value": "eur" },
           { "label": "USD", "value": "usd" },
@@ -54,7 +54,7 @@
       { "name": "dateConstatationEcheancesImpayes", "label": "Date Constatation des Impayés", "type": "date" },
       { "name": "montantCapitalRetard", "label": "Montant du Capital en Retard", "type": "number" },
       { "name": "montantInteretsRetard", "label": "Montant des Intérêts en Retard", "type": "number" },
-      { "name": "lautre", "label": "Autre", "type": "text" }
+      { "name": "montantInteretsCourus", "label": "Montant des Intérêts courus", "type": "number" }
     ],
   
     "Dates": [

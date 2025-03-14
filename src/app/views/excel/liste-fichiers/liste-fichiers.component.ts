@@ -9,10 +9,10 @@ import { Router } from '@angular/router';
   selector: 'app-integration-excel',
   standalone: true,
   imports: [HeaderComponent,DatatableComponent,SearchbarComponent,ButtonModule],
-  templateUrl: './integration-excel.component.html',
-  styleUrl: './integration-excel.component.css'
+  templateUrl: './liste-fichiers.component.html',
+  styleUrl: './liste-fichiers.component.css',
 })
-export class IntegrationExcelComponent {
+export class ListeFichiersComponent {
   constructor(private router:Router) { }
   colonnes = [
     { field: 'nom_fichier', header: 'Nom du fichier' },

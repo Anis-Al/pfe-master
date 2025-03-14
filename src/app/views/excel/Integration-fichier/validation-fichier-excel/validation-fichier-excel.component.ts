@@ -1,6 +1,6 @@
 import { Component,OnInit } from '@angular/core';
-import { ExcelService } from '../../../core/services/excel.service';
-import { HeaderComponent } from '../../../shared/header/header.component';
+import { ExcelService } from '../../../../core/services/excel.service';
+import { HeaderComponent } from '../../../../shared/header/header.component';
 
 @Component({
   selector: 'app-validation-fichier-excel',
