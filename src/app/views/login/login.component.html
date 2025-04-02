@@ -1,10 +1,10 @@
-<p-toast></p-toast>
-<div class="wrapper">
-    <span class="titre-app">Déclarations correctives</span>
+
+<div  class="wrapper">
+    <span class="titre-app">Déclarations Correctives</span>
     <div class="input-container">
         <form (ngSubmit)="login()">
-        <span class="text-login">LOGIN</span>
-        <input pInputText name="matricule" [(ngModel)]="matricule" type="text" class="input-field matricule " placeholder="Matricule">
+        <span class="text-login">Connexion</span>
+        <input pInputText name="matricule" [(ngModel)]="matricule" type="text" class="ng-dirty input-field matricule " placeholder="Matricule">
         <input pInputText name="motdepasse" [(ngModel)]="motdepasse" type="password" class="ng-dirty input-field mdp " placeholder="Mot de passe" />
         <button type="submit" class="button-login">Se Connecter</button>
         </form>
@@ -12,4 +12,6 @@
 
     </div>  
 </div>
+<p-toast></p-toast>
+
  

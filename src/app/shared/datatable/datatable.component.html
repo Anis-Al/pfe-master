@@ -1,15 +1,26 @@
-<p-table [value]="data" [paginator]="true" stripedRows [rowHover]="true"
-    [scrollable]="true" [resizableColumns]="true" styleClass="p-datatable-gridlines"
-    [rows]="6" scrollHeight="400px" [tableStyle]="{ 'min-width': '1200px', 'max-width': '80%' }">
+
+<p-table  
+    [value]="data"
+    [paginator]="true" 
+    stripedRows 
+    [rowHover]="true"
+    [scrollable]="true"
+    [resizableColumns]="true" 
+    styleClass="p-datatable-gridlines"
+    [rows]="4"
+    [tableStyle]="computedStyle"
+    [scrollHeight]="'auto'"
+    [autoLayout]="true"  
+>
 
     <ng-template pTemplate="header">
         <tr>
-            <th pFrozenColumn *ngIf="source === 'reporting'" style="text-align: center; width: 50px;">
+            <th pFrozenColumn *ngIf="getRoute()=='/liste-credits'" class="frozen-col"  style="text-align:left;">
                 <p-tableHeaderCheckbox />
             </th>
 
-            <th pFrozenColumn *ngIf="source === 'reporting'" pResizableColumn [pSortableColumn]="cols[0]?.field"
-                style="min-width:250px;">
+            <th pFrozenColumn *ngIf="getRoute()=='/liste-credits'" pResizableColumn class="frozen-col" [pSortableColumn]="cols[0]?.field"
+            >
                 <div>
                     {{ cols[0]?.header }}
                     <p-sortIcon [field]="cols[0]?.field" />
@@ -26,19 +37,19 @@
                 </div>
             </th>
 
-            <th *ngIf="source === 'utilisateurs'">
-                Actions
+            <th pFrozenColumn *ngIf="srs.afficherActions$ | async" class="frozen-actions frozen-col" >
+               Actions
             </th>
         </tr>
     </ng-template>
 
     <ng-template pTemplate="body" let-rowData>
         <tr>
-            <td pFrozenColumn *ngIf="source === 'reporting'" style="background-color:#e7e7e7;">
+            <td pFrozenColumn *ngIf="source === 'reporting'" class="frozen-col" style="background-color:#e2e2e2;text-align:left;" >
                 <p-tableCheckbox [value]="rowData" />
             </td>
 
-            <td pFrozenColumn *ngIf="source === 'reporting'" style="background-color:#e7e7e7;min-width: 200px;">
+            <td pFrozenColumn *ngIf="source === 'reporting'" class="frozen-col" style="background-color:#e2e2e2;">
                 {{ rowData[cols[0]?.field] }}
             </td>
 
@@ -51,10 +62,11 @@
                 </ng-template>
             </td>
 
-            <td *ngIf="source === 'utilisateurs'">
-                <p-button icon="pi pi-pencil" [rounded]="true" [outlined]="true"></p-button>
-                <p-button icon="pi pi-trash" severity="danger" [rounded]="true" [outlined]="true"></p-button>
+            <td pFrozenColumn *ngIf="srs.afficherActions$ | async" class="frozen-actions frozen-col" style="background-color: #ffffff;text-align:right;min-width: 120px;">
+                <p-button icon="pi pi-pencil" ></p-button>
+                <p-button icon="pi pi-trash" severity="danger" ></p-button>
             </td>
+            
         </tr>
     </ng-template>
 </p-table>

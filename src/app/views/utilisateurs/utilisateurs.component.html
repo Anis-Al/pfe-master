@@ -1,6 +1,6 @@
-<app-header></app-header>
-<div class="home-container">
-<div class="titre-page"><span>Utilisateurs</span></div>
-
-<app-datatable [data]="users" [cols]="userColumns" [source]="'utilisateurs'" ></app-datatable>
+<div class="options-container">  
+    <app-searchbar></app-searchbar>
+    <p-button icon="pi pi-plus" iconPos="right" label="Nouvel Utilisateur" ></p-button>
 </div>
+<app-datatable [data]="users" [cols]="userColumns" [source]="'utilisateurs'" ></app-datatable>
+

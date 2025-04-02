@@ -1,11 +1,11 @@
-<app-header></app-header>
-<div class="home-container">
     <div class="options-container">  
-        <app-searchbar></app-searchbar>
-        <span class="titre-page">Liste des crédits</span> 
-        <p-button label="Exporter"></p-button>
+            <app-searchbar></app-searchbar>
+            <div class="button-group">
+                <p-button label="Nouveau Credit" icon="pi pi-plus" iconPos="right" (onClick)="redirigerVersFormCredit()"></p-button>
+                <p-button label="Exporter" icon="pi pi-file-excel" iconPos="right" ></p-button>
+            </div>    
     </div>
     <div class="table-reporting-container">
         <app-datatable [data]="data" [cols]="cols" [source]="source" [estStatique]="true"></app-datatable>
     </div>
-</div>
+

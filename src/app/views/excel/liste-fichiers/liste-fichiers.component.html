@@ -1,11 +1,8 @@
-<app-header></app-header>
-<div class="home-container">
     <div class="options-container">  
         <app-searchbar></app-searchbar>
-        <span class="titre-page">Liste des fichiers EXCEL</span> 
-        <p-button label="Charger un fichier EXCEL" (onClick)="ChargementExcel()"></p-button>
+        <p-button label="Charger" icon="pi pi-upload" iconPos="right"  (onClick)="ChargementExcel()"></p-button>
     </div>
     <div class="table-reporting-container">
         <app-datatable [data]="lignes" [cols]="colonnes" [badge]="badge" ></app-datatable>
     </div>
-</div>
+

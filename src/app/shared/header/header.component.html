@@ -2,27 +2,52 @@
   <ng-template pTemplate="start">
     <div class="navbar-left">
       <a routerLink="/acceuil">
-      <img src="../../../assets/images/sga-logo-mini.png" style="filter: brightness(120%);" height="40" alt="Company Logo">
+      <img src="../../../assets/images/sga-logo-mini.png" style="filter: brightness(90%);" height="40" alt="Company Logo" pTooltip="Acceuil" tooltipPosition="right" showDelay="500">
       </a>
       <div class="center-links">
-        <p-menu #ExcelMenu [model]="excel_sous_menu" [popup]="true"></p-menu>
-        <button pButton label="Excel" icon="pi pi-file" (mouseenter)="ExcelMenu.toggle($event)" class="p-button-text"></button>
+        <!-- <p-menu #ExcelMenu [model]="excel_sous_menu" [popup]="true"></p-menu>(mouseenter)="ExcelMenu.toggle($event)" -->
+        <button
+         pButton
+        label="Excel" 
+        icon="pi pi-file" 
+        routerLink="/liste-excels" 
+        [ngClass]="{'active-link': ('/liste-excels' === (activeRoute$ | async))}"
+        class="p-button-text">
+        </button>
 
-        <p-menu #CreditsMenu [model]="credits_sous_menu" [popup]="true"></p-menu>
-        <button pButton label="Crédits" icon="pi pi-list" (mouseenter)="CreditsMenu.toggle($event)" class="p-button-text"></button>
+        <!-- <p-menu #CreditsMenu [model]="credits_sous_menu" [popup]="true"></p-menu>(mouseenter)="CreditsMenu.toggle($event)" -->
+        <button 
+        pButton 
+        label="Crédits" 
+        icon="pi pi-list"  
+        class="p-button-text">
+      </button>
 
-        <p-menu #BaMenu [model]="declba_sous_menu" [popup]="true"></p-menu>
-        <button pButton label="Décl. BA" icon="pi pi-copy" (mouseenter)="BaMenu.toggle($event)" class="p-button-text"></button>
+        <!-- <p-menu #BaMenu [model]="declba_sous_menu" [popup]="true"></p-menu>(mouseenter)="BaMenu.toggle($event)" -->
+        <button pButton label="Décl. BA" icon="pi pi-copy"  class="p-button-text"></button>
 
         <button pButton routerLink="/users" label="Habilitations" icon="pi pi-cog"  class="p-button-text"></button>
       </div>
-    </div>
+    </div>  
   </ng-template>
 
     
   <ng-template pTemplate="end">
-    <button pButton class="logout-button p-button-rounded" (click)="logout()" routerLink="/login">
-      <i class="pi pi-sign-out"></i>
-    </button>
+      <div class="user">
+        <div class="user-icon">
+          <i class="pi pi-user"></i>
+        </div>
+        <div class="user-data">
+          <span class="data">Alim Anis</span>
+        </div>
+      </div>
+  
+      <button pButton class="logout-button p-button-rounded" pTooltip="Guide d'utilisation" tooltipPosition="left" showDelay="500" (click)="openPdf()">
+        <i class="pi pi-question-circle"></i>
+      </button>
+      <button pButton class="logout-button p-button-rounded" pTooltip="Déconnecter" tooltipPosition="bottom" showDelay="500" (click)="logout()" routerLink="/login">
+        <i class="pi pi-sign-out"></i>
+      </button>
   </ng-template>
+  
 </p-menubar>

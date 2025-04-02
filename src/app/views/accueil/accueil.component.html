@@ -1,62 +1,95 @@
-<app-header></app-header>
-<div class="home-container">
-    <div class="home-content">
-        <div class="bienvenue">
-            <span>Bienvenue Anis</span>
-        </div>
-        <div class="matricule">
-            <span>Matricule : {{this.matricule}}</span>
-        </div>
-        <button
-        class="button-pdf"
-        (click)="openPdf()"
-        >
-        Guide d'utilisation
-        </button>
-        <div class="cards-container">
-            <p-card class="card">
+<div class="home-content">
+       
+   <div class="role titre">Votre rôle : <b>Validateur</b></div>
+    
+   <div class="stats-wrapper">
+    <div class="stat-card">
+      <i class="pi pi-question icon"></i>
+      <span class="stat-value">12</span>
+      <span class="stat-label">Nombre d'erreurs moyen par fichier</span>
+    </div>
+    <div class="stat-card">
+      <i class="pi pi-hourglass  icon"></i>
+      <span class="stat-value">3</span>
+      <span class="stat-label">Corrections en attente</span>
+    </div>
+    <div class="stat-card">
+      <i class="pi pi-info-circle icon"></i>
+      <span class="stat-value">5</span>
+      <span class="stat-label">Déclarations BA générées</span>
+    </div>
+  </div>
+    
+  <div class="card-wrapper">
+    <div class="titre"><span>Liens Rapides</span></div>
+    <div class="cards-container">
+
+      <p-card class="card">
+
               <ng-template pTemplate="header">
+
                 <i class="pi pi-file icon-excel"></i>
+
               </ng-template>
+
               <h2 class="card-title">Fichiers Excel</h2>
-              <p class="card-description">Consultez les fichiers .xlsx traités  </p>
+
+              <p class="card-description">Consultez les fichiers Excel traités  </p>
+
               <button pButton label="Liste des fichiers Excel" class="card-button"></button>
+
             </p-card>
           
             <p-card class="card">
+
               <ng-template pTemplate="header">
+
                 <i class="pi pi-list icon-credits"></i>
+
               </ng-template>
+
               <h2 class="card-title">Crédits</h2>
+
               <p class="card-description">Consultez les crédits existants</p>
               <br>
               <button pButton label="Liste des crédits" class="card-button"></button>
-            </p-card>
-          
-            <p-card class="card">
-              <ng-template pTemplate="header">
-                <i class="pi pi-copy icon-ba"></i>
-              </ng-template>
-              <h2 class="card-title">Déclarations BA</h2>
-              <p class="card-description">Consultez les fichiers .xml générés .</p>
-              <button pButton label="Liste des fichiers XML" class="card-button"></button>
-            </p-card>
-          
-            <p-card class="card">
-              <ng-template pTemplate="header">
-                <i class="pi pi-cog icon-habilitations"></i>
-              </ng-template>
-              <h2 class="card-title">Habilitations</h2>
-              <p class="card-description">Consultez les utilisateurs de cette application.</p>
-              <button pButton label="Liste des utilisateurs" class="card-button"></button>
-            </p-card>
-          </div>
-          
-         
-          
-          
-         
-        
 
-    </div>
-</div>
+            </p-card>
+          
+            <p-card class="card">
+
+              <ng-template pTemplate="header">
+
+                <i class="pi pi-copy icon-ba"></i>
+
+              </ng-template>
+
+              <h2 class="card-title">Déclarations BA</h2>
+              
+              <p class="card-description">Consultez les fichiers des déclarations BA générés .</p>
+              
+              <button pButton label="Liste des fichiers XML" class="card-button"></button>
+            
+            </p-card>
+          
+            <p-card class="card">
+            
+              <ng-template pTemplate="header">
+            
+                <i class="pi pi-cog icon-habilitations"></i>
+            
+              </ng-template>
+            
+              <h2 class="card-title">Habilitations</h2>
+            
+              <p class="card-description">Consultez les utilisateurs de cette application.</p>
+            
+              <button pButton label="Liste des utilisateurs" class="card-button"></button>
+            
+            </p-card>
+          
+          </div>
+ 
+        </div>
+    
+      </div>

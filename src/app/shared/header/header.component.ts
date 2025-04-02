@@ -1,42 +1,64 @@
-import { Component } from '@angular/core';
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-// import { faCog,faEye,faPencil,faList, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
-import { RouterModule,ActivatedRoute } from '@angular/router'; // ✅ Import RouterModule
+import { Component,ChangeDetectionStrategy  } from '@angular/core';
 import { MenubarModule } from 'primeng/menubar';
-import { MenuModule } from 'primeng/menu';
+import { Menu, MenuModule } from 'primeng/menu';
 import { ButtonModule } from 'primeng/button';
+import { TooltipModule } from 'primeng/tooltip';
+import {  RouterLink } from '@angular/router';
+import { CommonModule } from '@angular/common';
+import { SuiviRoutesService } from '../../core/services/suivi-routes.service';
+import { Observable } from 'rxjs';
 
 
 @Component({
   selector: 'app-header',
   standalone: true,
-  imports: [FontAwesomeModule,ButtonModule,RouterModule,MenubarModule,MenuModule], // ✅ Add RouterModule to the imports array
+  imports: [ButtonModule,MenubarModule,MenuModule,TooltipModule,CommonModule,RouterLink], 
   templateUrl: './header.component.html',
-  styleUrl: './header.component.css'
+  styleUrl: './header.component.css',
+  changeDetection: ChangeDetectionStrategy.OnPush 
+
+
 })
 export class HeaderComponent {
-  // faSignOut = faSignOutAlt; 
-  // faList = faList;
-  // faCog = faCog;
-  excel_sous_menu = [
-    { label: 'Charger un fichier Excel', routerLink: ['/chargement-excel'] },
-    { label: 'Liste des fichiers Excel',  routerLink: ['/liste-excels'] },
-    { label: 'Audit',  routerLink: ['/dashboard/analytics'] }
+  
+  urlGuidePdf = '../../../assets/fichiers/guide.pdf'; 
+  matricule:string='';
+  activeRoute$: Observable<string>;
 
-  ];  
 
-  credits_sous_menu = [
-    { label: 'Ajouter un crédit',  routerLink: ['/form-credit'] },
-    { label: 'Liste des crédits',  routerLink: ['/liste-credits'] },
-    { label: 'Reporting',routerLink: ['/loans/rejected'] },
-    { label: 'Audit',  routerLink: ['/audit'] , queryParams: { type: 'excel' }}
 
-  ];
+  openPdf() {
+    window.open(this.urlGuidePdf, '_blank');
+  }
+  constructor(public srs:SuiviRoutesService){
+    this.activeRoute$ = this.srs.routeActuelle$; // Pas besoin de subscribe()
 
-  declba_sous_menu = [
-    { label: 'Génerer un fichier XML',  routerLink: ['/clients/all'] },
-    { label: 'Liste des fichiers XML', routerLink: ['/clients/vip'] }
-  ];
+  }
+  
+
+  
+  
+  // pages et leurs chemins
+  // excel_sous_menu = [
+  //   { label: 'Charger un fichier Excel', routerLink: ['/chargement-excel'] },
+  //   { label: 'Liste des fichiers Excel',  routerLink: ['/liste-excels'] },
+  //   { label: 'Audit', routerLink: ['/audit']  }
+
+  // ];  
+
+  // credits_sous_menu = [
+  //   { label: 'Ajouter un crédit',  routerLink: ['/form-credit'] },
+  //   { label: 'Liste des crédits',  routerLink: ['/liste-credits'] },
+  //   { label: 'Reporting',routerLink: ['/loans/rejected'] },
+  //   { label: 'Audit',  routerLink: ['/audit'] }
+
+  // ];
+
+  // declba_sous_menu = [
+  //   { label: 'Générer un fichier de Déclaration BA ',  routerLink: ['/clients/all'] },
+  //   { label: 'Liste des fichiers des Déclarations BA', routerLink: ['/clients/vip'] }
+  // ];
+  //
 
   logout() {
     console.log('Logging out...');

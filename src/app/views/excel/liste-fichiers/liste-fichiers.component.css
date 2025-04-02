@@ -1,65 +1,63 @@
-.home-container{
-    margin-top:5%;
+.options-container {
     width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-
-}
-.options-container {
-    width: 91%; 
-    display: flex;
-    align-items: center; 
-    justify-content: center; 
     padding: 10px 0;
+    justify-content: space-between;
 }
 
-.options-container app-searchbar,
-.options-container .titre-page,
-.options-container p-button {
-    flex-grow: 1; 
-    text-align: center;
-}
 .options-container app-searchbar {
-    text-align: left;
-    max-width: 150px; 
-}
-
-.options-container p-button {
-    text-align: left;
-    max-width: 210px;
-}
-
-
-.table-reporting-container{
-    width: 91%;
-    overflow-x: auto; 
-
+    max-width: 300px;
 }
 
 ::ng-deep .options-container .p-button {
-background-color: #FF2D30 !important;
-color: white !important;
-width: 170px !important;
-font-size: 12px !important;
-border-color: #FF2D30 !important;
+    background-color: #c00010 !important;
+    color: white !important;
+    width: 150px !important;
+    height: 50px !important;
+    font-size: 15px !important;
+    border-color: #c00010 !important;
+    padding: 10px 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 10px;
+    white-space: nowrap !important;
+    border-radius: 8px !important;
+    margin: 0 !important;
+}
+::ng-deep .options-container .p-button:hover {
+    background-color: #dadada !important;
+    color: rgb(0, 0, 0) !important;
+   
+}
 
+.table-reporting-container {
+    width: 100%;
+    margin-top: 0 !important;
+    padding-top: 5px;
 }
-.titre-page{
-font-size: 48px;
-font-family: "ADLaM Display",serif;
-text-align: center;
-color: #FF2D30;
-font-weight: 500;
+
+/* Ensures the icon and text remain inline */
+::ng-deep .options-container .p-button .pi {
+    font-size: 18px; /* Adjust icon size if needed */
 }
+
+/* ✏️ Search Bar Input */
 ::ng-deep app-searchbar input {
-    background-color: #ccc !important; 
-    color:black !important;
-    width: 200px !important;  
-    height: 50px !important; 
-    padding: 5px 10px !important; 
-    font-size: 14px !important; 
+    background-color: #f0f0f0 !important;
+    color: black !important;
+    width: 250px !important; /* Keep same width as button */
+    height: 50px !important;
+    padding: 5px 10px !important;
+    font-size: 14px !important;
     border-radius: 8px !important;
     border: 1px solid #ccc !important;
+}
+
+/* 📊 Table Container */
+.table-reporting-container {
+    width: 100%;
+    overflow-x: auto; /* Enables horizontal scrolling if needed */
+    margin-top: -5px; /* Adjust alignment with button */
 }

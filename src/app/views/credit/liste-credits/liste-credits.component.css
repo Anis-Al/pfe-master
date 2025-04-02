@@ -1,65 +1,63 @@
-.home-container{
-    margin-top:5%;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-}
 .options-container {
-    width: 91%; 
+    width: 80%;
+    max-width: 1200px;
     display: flex;
-    align-items: center; 
-    justify-content: center; 
+    align-items: center;
+    justify-content: space-between;
     padding: 10px 0;
+    margin: 0 auto;
 }
 
-.options-container app-searchbar,
-.options-container .titre-page,
-.options-container p-button {
-    flex-grow: 1; 
+/* Search bar */
+.options-container app-searchbar {
+    text-align: left;
+    max-width: 250px;
+    flex: 1;
+}
+
+.button-group {
+    display: flex;
+    gap: 10px; 
+}
+
+.button-group p-button {
+    width: 170px; 
     text-align: center;
 }
 
-.options-container app-searchbar {
-    text-align: left;
-    max-width: 150px; 
-}
-
-.options-container p-button {
-    text-align: right;
-    max-width: 120px;
-}
-
-
-.table-reporting-container{
-    width: 91%;
-    overflow-x: auto; 
-
-}
-::ng-deep .p-search-bar{
-    height:20px !important;
-}
 ::ng-deep .options-container .p-button {
-background-color: #FF2D30 !important;
-color: white !important;
-width: auto !important;
+    background-color: #c00010 !important;
+    color: white !important;
+    width: 170px !important; 
+    height: 50px !important;
+    font-size: 15px !important;
+    border-color: #c00010 !important;
+    padding: 5px 0px;
 }
-.titre-page{
-font-size: 48px;
-font-family: "ADLaM Display",serif;
-text-align: center;
-color: #FF2D30;
-font-weight: 500;
+
+::ng-deep .options-container .p-button:hover {
+    background-color: #dadada !important;
+    border:none !important;
+    color: #000000 !important;
 }
+
 ::ng-deep app-searchbar input {
-    background-color: #f0f0f0 !important; 
-    color:black !important;
-    width: 200px !important;  
-    height: 50px !important; 
-    padding: 5px 10px !important; 
-    font-size: 14px !important; 
+    background-color: #f0f0f0 !important;
+    color: black !important;
+    width: 250px !important; /* Keep same width as buttons */
+    height: 50px !important;
+    padding: 5px 10px !important;
+    font-size: 14px !important;
     border-radius: 8px !important;
     border: 1px solid #ccc !important;
+}
+
+/* Table container */
+.table-reporting-container {
+    width: 80%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-height: none;
+    max-width: 1500px;
+    margin: 0 auto;
 }

@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
     {
         path: '',
-        redirectTo: 'acceuil',
+        redirectTo: 'login',
         pathMatch: 'full'
     },
     {
@@ -41,5 +41,10 @@ export const routes: Routes = [
     {
         path:'chargement-excel',
         loadComponent: () => import('./views/excel/Integration-fichier/chargement-fichier-excel/chargement-fichier-excel.component').then(m => m.ChargementFichierExcelComponent)
+    }
+    ,
+    {
+        path:'validation-excel',
+        loadComponent: () => import('./views/excel/Integration-fichier/validation-fichier-excel/validation-fichier-excel.component').then(m => m.ValidationFichierExcelComponent)
     }
 ];

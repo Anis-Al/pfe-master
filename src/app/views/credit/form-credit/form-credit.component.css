@@ -1,62 +1,53 @@
-.home-container{
-    margin-top:6%;
-    width: 100%;
+.num-contrat{
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    align-items: center;
-}
-.titre-page{
-font-family: "ADLaM Display",serif;
-display: flex;
-flex-direction: column; 
-justify-content: center;
-text-align: center;
-color: #FF2D30;
-font-weight: 400;
-}
-.titre-page :nth-child(1){
-    font-size: 44px;
-}
-.titre-page :nth-child(2){
-    font-size: 32px;
-    span{
-      font-weight: 300;
-      font-size: 28px;
+    & span{
+      font-size: 30px;
+      text-align: center;
+      color: #000000;
+      font-weight: 600;
     }
-    
 }
-:host ::ng-deep  .home-container .p-button {
+
+:host ::ng-deep .p-button {
   
-  width: 150px !important;
-  position: relative;
-  left: 550px;
-  bottom: 50px;
-  background-color: #FF2D30 !important; 
-  color: white !important;
-  font-size: 20px !important;
-  font-family: Roboto,sans-serif;
-  font-weight: 500 !important;
-  border-radius: 12px !important;
-  border : solid 2px #000000  !important;
-&:hover {
-    background-color: #270500 !important;
-    border-color: #610d02 !important;
-} 
+  position: absolute;
+  right: 5%;
+  top: 20%; 
+  background-color: #c00010 ;
+  color: white ;
+  width: 170px ; 
+  height: 50px ;
+  font-size: 17px ;
+  border-color: #000000 ;
+  padding: 5px 0;
 }
-.form-container{
+
+:host ::ng-deep  .p-button:hover {
+  background-color: #dadada !important;
+  border:none !important;
+  color: #000000 !important;
+}
+
+
+.form-container {
     display: flex;
-    width: 100%;
-    height: 70%;
-    border-top: #FF2D30 solid 2px;
+    width: 100vw; /* Forces full viewport width */
+    max-width: 100%; /* Ensures it never exceeds the screen width */
+    height: auto;
+    border-top: #000000 solid 2px;
+    margin: 40px 0 0 0  ; /* Removes extra spacing */
+    padding: 0; /* Ensures no gaps */
+    box-sizing: border-box; /* Prevents width issues */
 }
+
 .form-groups{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #FF2D30;
-width: 14%;
+  background-color: #000000;
+width: 16%;
 height: 100%;
 }
 .form-inputs{
@@ -69,14 +60,14 @@ height: 100vh;
 padding: 20px 10px;
 
 }
-::ng-deep .p-menu {
+::ng-deep .form-container .form-groups .p-menu {
   font-family: Roboto,sans-serif;
-  background-color: #FF2D30 !important;
+  background-color: #000000 !important;
   color: white !important;
   padding: 0px 10px 30px 0px !important;
   border-color: transparent !important;
-  font-size: 14px !important;
-  font-weight: 300 !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
   
  
 }
@@ -89,10 +80,10 @@ padding: 20px 10px;
 }
 .titre-categories{
   width: 100%;
-  font-size: 16px;
+  font-size: 20px;
   font-weight: 600;
   color: white;
-  padding: 10px 20px;
+  padding: 10px 15px;
   letter-spacing: 20%;
 
   
@@ -124,7 +115,7 @@ padding: 20px 10px;
 }
 
 .selected {
-  background-color: #000000 !important; 
-  color: white !important;
+  background-color: #dadada !important; 
+  color: rgb(0, 0, 0) !important;
   font-weight: 500;
 }

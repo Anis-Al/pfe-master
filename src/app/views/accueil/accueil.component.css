@@ -1,46 +1,21 @@
 
-.home-container{
-    margin-top:5%;
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden; 
-}
 .home-content{
     text-align: center;
 }
-.bienvenue{
-    font-family: "ADLaM Display",serif;
-    color: #FF2D30;
-    font-size: 64px;
-    font-weight: 500;
-}
-.matricule{
-    font-family: "ADLaM Display",serif;
-    font-size: 32px;
-    font-weight: 300;
-    padding-top: 10px;
-    color: #000000;
-}
-.button-pdf{
-    background-color: #FF2D30;
-    color: #ffffff;
-    font-family: "Ubuntu",serif;
-    font-size: 32px;
-    font-weight: normal;
-    padding: 8px 10px;
-    letter-spacing: 2%;
-    border-radius: 12px;
-    margin-top: 40px;
-    &:hover{
-        background-color: #5f1408;
-        cursor: pointer;
-    }
 
-}
 
 /* cartes */
+.card-wrapper{
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  justify-content: end;
+}
+.titre{
+  font-size: 20px;
+  color: #000000;
+  font-weight: 500;
+}
 .cards-container {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -49,7 +24,7 @@
     padding: 0 1.5rem;
   }
 
-  @media (max-width: 1024px) {
+  /* @media (max-width: 1024px) {
     .cards-container {
       grid-template-columns: repeat(2, 1fr);
     }
@@ -59,7 +34,7 @@
     .cards-container {
       grid-template-columns: repeat(1, 1fr);
     }
-  }
+  } */
   ::ng-deep .p-card-header{
     margin-top: 10px;
   }
@@ -101,3 +76,59 @@
     font-size: 2rem;
     color: #8b5cf6;
   }
+  .role {
+    margin-bottom: 10px; /* Reduce spacing */
+  }
+  
+  .stats-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    gap: 15px;
+    margin-bottom: 2px;   
+  }
+  
+  .stat-card {
+    flex: 1;
+    text-align: center;
+    background: #f8f8f8;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .stat-card .icon {
+    font-size: 24px;
+    color: #d32f2f;
+  }
+  
+  .stat-value {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 5px;
+  }
+  
+  .recent-activity h3 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .recent-activity ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .recent-activity li {
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+  
+  .recent-activity i {
+    margin-right: 5px;
+    color: #d32f2f;
+  }
+  .recent-activity{
+    margin-top: 50px;
+  }
+  

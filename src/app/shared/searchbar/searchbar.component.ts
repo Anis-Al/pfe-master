@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { IconField } from 'primeng/iconfield';
 import { InputTextModule } from 'primeng/inputtext';
@@ -12,6 +12,13 @@ import { InputTextModule } from 'primeng/inputtext';
   styleUrl: './searchbar.component.css'
 })  
 export class SearchbarComponent {
-  resultat:string|undefined;
+  elementRecherche: string = '';
 
+  @Output() emetteur: EventEmitter<string> = new EventEmitter<string>();
+
+  onKeydown(event: KeyboardEvent) {
+    if (event.key === 'Enter') {
+      this.emetteur.emit(this.elementRecherche); 
+    }
+  }
 }

@@ -1,11 +1,9 @@
 ::ng-deep .p-inputtext {
     background-color: white !important;
+    border: solid 0.2px #000000 !important;
     
 }
 ::ng-deep .p-inputtext:active{
-    border-color: #ff2d30 !important;
-    &::after{
-        border-color: #ff2d30 !important;
-
-    }
+    border-color: #000000 !important;
+   
 }

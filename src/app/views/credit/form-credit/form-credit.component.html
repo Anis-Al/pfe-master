@@ -1,13 +1,9 @@
-<app-header></app-header>
-
-<div class="home-container" *ngIf="!isLoading;else loading">
-    <div class="titre-page">
-        <span>Formulaire Crédit </span>
-        <span>Crédit : <span> {{numContratValue}} </span> </span>
-    </div>
+        <div class="num-contrat">
+            <span>Crédit : <span> {{numContratValue}} </span> </span>
+        </div>
 
 
-    <p-button label="Sauvegarder" class="btn-sauv sauv"></p-button>
+    <p-button label="Sauvegarder" class="btn-sauv sauv" icon="pi pi-save" iconPos="right" ></p-button>
 
     <div class="form-container">
         <div class="form-groups">
@@ -32,9 +28,3 @@
             </app-form-inputs-credit>
         </div>
     </div>
-</div>
-<ng-template #loading>
-    <div class="loading-container" style="position:absolute;left:45%;top:45%;">
-        <p-progress-spinner ariaLabel="loading" />
-    </div>
-</ng-template>

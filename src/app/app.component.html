@@ -1,1 +1,14 @@
-<router-outlet></router-outlet>
+<div class="loading-container" *ngIf="isLoading">
+    <p-progressSpinner></p-progressSpinner>
+</div>
+
+<div class="main-container" [class.hidden]="isLoading">
+    <app-header *ngIf="montrerHeader$ | async"></app-header>
+
+    <div class="container-page" >
+        <div class="titre-page">
+            <span>{{ titrePage$ | async }}</span>
+        </div>
+        <router-outlet></router-outlet>
+    </div>
+</div>

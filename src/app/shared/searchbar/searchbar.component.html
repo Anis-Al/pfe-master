@@ -1,4 +1,4 @@
 <p-iconfield>
-    <input type="text" pInputText placeholder="Recherche" />
+    <input type="text" [(ngModel)]="elementRecherche" (keydown)="onKeydown($event)" pInputText placeholder="Recherche..." />
 
 </p-iconfield>

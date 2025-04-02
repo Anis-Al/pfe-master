@@ -1,15 +1,7 @@
-.home-container{
-    margin-top:5%;
-    width: 100%;
+.audit-container{
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-}
-.titre-page{
-font-size: 48px;
-font-family: "ADLaM Display",serif;
-text-align: center;
-color: #FF2D30;
-font-weight: 500;
+    width: 100vw;
+    margin-left: 2%;
 }

@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { HeaderComponent } from '../../../shared/header/header.component';
 import { DatatableComponent } from '../../../shared/datatable/datatable.component';
 import { SearchbarComponent } from '../../../shared/searchbar/searchbar.component';
 import { ButtonModule } from 'primeng/button';
@@ -8,7 +7,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-integration-excel',
   standalone: true,
-  imports: [HeaderComponent,DatatableComponent,SearchbarComponent,ButtonModule],
+  imports: [DatatableComponent,SearchbarComponent,ButtonModule],
   templateUrl: './liste-fichiers.component.html',
   styleUrl: './liste-fichiers.component.css',
 })
@@ -45,7 +44,7 @@ export class ListeFichiersComponent {
   badge='statut';
 
     public ChargementExcel(){
-      this.router.navigate(['/ChargementExcel']);
+      this.router.navigate(['/chargement-excel']);
     }
 
 }

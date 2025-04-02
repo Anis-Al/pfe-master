@@ -31,23 +31,21 @@
     constructor(private fics: FormInputsCreditService, private cdr: ChangeDetectorRef) {}
 
     ngOnInit(): void {
-      setTimeout(() => { 
-
       this.fics.getFormGroups().subscribe(data => {
         this.formGroups = data;
-
+    
         this.items = Object.keys(this.formGroups).map(group => ({
-          label: group,
+          label: group, 
           command: () => this.selectGroup(group)
         }));
-
+    
         this.initFormControls();
         
         this.selectGroup(this.selectedGroup);
-        this.isLoading=false; 
+        this.isLoading = false; // Move it inside the subscribe callback
       });
-    },3000);
-  }
+    }
+    
 
     private initFormControls() {
       for (const groupName in this.formGroups) {

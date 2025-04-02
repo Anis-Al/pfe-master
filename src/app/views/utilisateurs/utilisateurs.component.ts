@@ -1,15 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { TableModule } from 'primeng/table';
-import { HeaderComponent } from '../../shared/header/header.component';
 import { DatatableComponent } from '../../shared/datatable/datatable.component';
 import { Router } from '@angular/router';
-
+import { SearchbarComponent } from '../../shared/searchbar/searchbar.component';
+import { ButtonModule } from 'primeng/button';
 
 
 
 
 @Component({
-  imports:[TableModule,HeaderComponent,DatatableComponent],
+  imports:[DatatableComponent,SearchbarComponent,ButtonModule],
   selector: 'app-utilisateurs',
   standalone: true,
   templateUrl: './utilisateurs.component.html',

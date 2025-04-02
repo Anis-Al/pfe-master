@@ -1,23 +1,86 @@
-::ng-deep .p-paginator {
-    width: auto !important; 
-    max-width: 40%; 
-    margin: 0 auto; 
-    display: flex;
-    justify-content: center;
-    background-color: #FF2D30  !important;
-    color:#000000; 
-  }
+/* proprietes paginateur*/
+:host ::ng-deep .p-paginator {
+  background-color: transparent !important; 
+  border-radius: 8px !important;
+  padding: 10px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:host ::ng-deep .p-paginator .p-paginator-pages .p-paginator-page {
+  background: #000000 !important;
+  color: rgb(255, 255, 255) !important;
+  font-weight: bold;
+  border-radius: 16px !important;
+  margin: 0 3px;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+:host ::ng-deep .p-paginator .p-paginator-pages .p-paginator-page:hover {
+  background: #bdbdbd !important;
+  transform: scale(1.1);
+}
+:host ::ng-deep .p-paginator .p-paginator-pages .p-paginator-page:active {
+  background: #bdbdbd !important;
+  transform: scale(1.1);
+}
+
+:host ::ng-deep .p-paginator .p-paginator-pages .p-paginator-page-selected {
+  background: #ff2d30 !important; 
+  color: white !important;
+}
+
+:host ::ng-deep .p-paginator .p-paginator-first,
+:host ::ng-deep .p-paginator .p-paginator-prev,
+:host ::ng-deep .p-paginator .p-paginator-next,
+:host ::ng-deep .p-paginator .p-paginator-last {
+  background: #000000 !important;
+  color: rgb(255, 255, 255) !important;
+  border-radius: 16px !important;
+  padding: 5px 10px !important;
+  transition: background 0.3s ease-in-out, transform 0.2s;
+}
+
+:host ::ng-deep .p-paginator .p-paginator-first:hover,
+:host ::ng-deep .p-paginator .p-paginator-prev:hover,
+:host ::ng-deep .p-paginator .p-paginator-next:hover,
+:host ::ng-deep .p-paginator .p-paginator-last:hover {
+  background: #bdbdbd !important;
+  transform: scale(1.1);
+}
+
+:host ::ng-deep .p-paginator .p-dropdown {
+  background: #ffffff !important;
+  color: black !important;
+  border-radius: 5px !important;
+  border: 1px solid #aaa !important;
+}
+
+:host ::ng-deep .p-paginator .p-inputtext {
+  background: #ffffff !important;
+  color: black !important;
+  border: 1px solid #aaa !important;
+  border-radius: 5px !important;
+  padding: 3px;
+  text-align: center;
+}
+  /* proprietes table*/
+
+
   ::ng-deep .p-datatable{
     border-radius: 30px !important;
+    min-width: 1200px;
+    max-width: 85%;
   }
   ::ng-deep .p-datatable .p-datatable-thead>tr{
     margin: 10px 20px;
   }
   ::ng-deep .p-datatable .p-datatable-thead > tr > th {
-    background-color: #FF2D30 !important; 
+    background-color: #000000 !important; 
     color: rgb(255, 255, 255) !important; 
     font-weight: bold !important; 
-    text-align: left; 
+    text-align: left !important;
     padding: 10px 20px !important; 
   }
   
@@ -27,20 +90,54 @@
       color: black !important;
         
     }
-    ::ng-deep .p-datatable .p-datatable-tbody > tr > td .p-button  {
-        width: 30px !important;
-        height: 30px !important; 
-        padding: 5px !important; 
-        margin-right: 8px !important;
+    ::ng-deep .p-datatable .p-datatable-tbody > tr > td   {
+        padding: 20px 20px !important; 
+
 
     }
           
-    .p-datatable .p-datatable-tbody > tr .p-button:hover {
-        background-color: #FF2D30 !important;
-        color: white;
-    }
+    
     ::ng-deep .p-table-header-checkbox{
       background-color: white;
+    }
+    ::ng-deep .p-button-icon-only{
+      background-color: transparent;
+      border: none;
+    }
+    
+    :host ::ng-deep .p-datatable .p-datatable-tbody > tr > td:not(.frozen-col) {
+      min-width: 320px;
+    }
+    :host ::ng-deep .frozen-actions {
+      position: sticky !important;
+      right: 0 !important;
+      z-index: 1 !important;
+      min-width: 50px !important;
+    }
+    :host ::ng-deep .p-datatable .p-datatable-thead > tr > th.frozen-actions {
+      text-align:center !important;
+    }
+  
+    :host ::ng-deep .p-datatable .p-checkbox-box{
+      background-color: #ffffff !important;
+      border:1px solid #ff2d30 !important;
+    }
+  
+    
+  :host ::ng-deep .p-datatable  .p-checkbox-checked .p-checkbox-box {
+    background-color: #ff2d30 !important;
+
+  }
+  :host ::ng-deep .p-datatable  .p-checkbox-checked .p-checkbox-box .p-checkbox-icon.p-icon {
+    color: #ffffff;
+  } 
+  
+
+    ::ng-deep .pi.pi-pencil{
+      color:#008b00;
+    }
+    ::ng-deep .pi.pi-trash{
+      color:rgb(255, 0, 0);
     }
     
   

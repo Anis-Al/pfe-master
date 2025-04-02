@@ -1,15 +1,52 @@
-.home-container{
-    margin-top:6%;
-    width: 100%;
+
+.options-container {
+    width: 100%; 
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: center; 
+    padding: 10px 0;
+    justify-content: flex-start;
+    gap: 62%; 
+}   
+
+.options-container app-searchbar,
+.options-container .titre-page,
+.options-container p-button {
+    flex-grow: 1; 
+    text-align: center;
 }
-.titre-page{
-font-size: 48px;
-font-family: "ADLaM Display",serif;
-text-align: center;
-color: #FF2D30;
-font-weight: 500;
+.options-container app-searchbar {
+    text-align: left;
+    max-width: 400px; 
 }
+
+.options-container p-button {
+    text-align: left;
+    max-width: 400px;
+    margin-left: 40px; 
+
+}
+::ng-deep .options-container .p-button {
+    background-color: #c00010 !important;
+    color: white !important;
+    height: 50px !important;
+    font-size: 14px !important;
+    border-color: transparent !important;
+    padding: 5px 10px;
+}
+::ng-deep .options-container .p-button:hover {
+    background-color: #dadada !important;
+    color: rgb(0, 0, 0) !important;
+   
+}
+
+::ng-deep app-searchbar input {
+    background-color: #f0f0f0 !important;
+    color: black !important;
+    width: 250px !important; 
+    height: 50px !important;
+    padding: 5px 10px !important;
+    font-size: 14px !important;
+    border-radius: 8px !important;
+    border: 1px solid #ccc !important;
+}
+

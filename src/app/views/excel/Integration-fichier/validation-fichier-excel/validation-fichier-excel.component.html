@@ -1,4 +1,10 @@
-<app-header></app-header>
-<div class="home-container">
-    <span></span>
+<div class="page-wrapper">
+    <div class="table table-erreurs">
+        <div class="titre-table titre-table-erreurs">Lignes Erronées</div>
+        <app-datatable [data]="erreurs" [cols]="colonnesErreurs" [stylePerso]="{ 'max-width': 'auto' }"></app-datatable>
+    </div>
+    <div class="buttons-container">
+        <p-button label="Valider" [style]="{ 'background-color': '#198754'}"  icon="pi pi-check" iconPos="right"></p-button>
+        <p-button label="Télecharger liste d'erreurs" [style]="{ 'background-color': '#ff2d30'}" icon="pi pi-download" iconPos="right"  ></p-button>
+    </div>
 </div>
